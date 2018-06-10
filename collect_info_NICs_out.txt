@@ -1,0 +1,142 @@
+--> Server and OS
+Linux UP-02 4.4.0-2-upboard #12-Ubuntu SMP Thu Dec 1 15:01:52 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+--> CPU Type
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    1
+Core(s) per socket:    4
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 76
+Model name:            Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz
+Stepping:              4
+CPU MHz:               1237.668
+CPU max MHz:           1920.0000
+CPU min MHz:           480.0000
+BogoMIPS:              2879.90
+Virtualization:        VT-x
+NUMA node0 CPU(s):     0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes rdrand lahf_lm 3dnowprefetch epb tpr_shadow vnmi flexpriority ept vpid tsc_adjust smep erms dtherm ida arat
+
+--> IRQ Balance?
+● irqbalance.service - LSB: daemon to balance interrupts for SMP systems
+   Loaded: loaded (/etc/init.d/irqbalance; bad; vendor preset: enabled)
+   Active: active (running) since Fri 2018-03-16 15:36:36 PDT; 2 months 14 days ago
+     Docs: man:systemd-sysv-generator(8)
+   CGroup: /system.slice/irqbalance.service
+           └─1052 /usr/sbin/irqbalance --pid=/var/run/irqbalance.pid
+
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+
+--> SYSCTL Settings?
+net.core.netdev_max_backlog = 1000
+net.core.rmem_default = 212992
+net.core.rmem_max = 67108864
+net.core.somaxconn = 128
+net.core.wmem_default = 212992
+net.core.wmem_max = 67108864
+net.ipv4.tcp_allowed_congestion_control = htcp cubic reno
+net.ipv4.tcp_available_congestion_control = htcp cubic reno
+net.ipv4.tcp_congestion_control = htcp
+net.ipv4.tcp_rmem = 4096	87380	33554432
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_wmem = 4096	65536	33554432
+net.netfilter.nf_conntrack_timestamp = 0
+
+--> RC.local?
+
+exit 0
+
+--> What test suites are running?
+bwctld (:::4823)
+systemd (])
+25201 (])
+
+--> Interface 1: enp1s0
+enp1s0    Link encap:Ethernet  HWaddr 00:07:32:42:21:c6  
+          inet addr:128.32.170.133  Bcast:128.32.170.255  Mask:255.255.255.128
+          inet6 addr: fe80::207:32ff:fe42:21c6/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2785900330 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1963133419 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:10000 
+          RX bytes:3338727703640 (3.3 TB)  TX bytes:2397651477858 (2.3 TB)
+
+Interface info for enp1s0:
+driver: r8169
+version: 2.3LK-NAPI
+firmware-version: rtl8168g-2_0.0.1 02/06/13
+expansion-rom-version: 
+bus-info: 0000:01:00.0
+supports-statistics: yes
+supports-test: no
+supports-eeprom-access: no
+supports-register-dump: yes
+supports-priv-flags: no
+
+
+Interrupts for enp1s0:
+            CPU0       CPU1       CPU2       CPU3       
+
+ 327:         33  936777938          0          0   PCI-MSI 524288-edge      enp1s0
+
+Pause parameters for enp1s0:
+Coalesce parameters for enp1s0:
+Ring parameters for enp1s0:
+Features for enp1s0:
+rx-checksumming: on
+tx-checksumming: off
+	tx-checksum-ipv4: off
+	tx-checksum-ipv6: off
+scatter-gather: off
+	tx-scatter-gather: off
+tcp-segmentation-offload: off
+	tx-tcp-segmentation: off
+	tx-tcp6-segmentation: off
+generic-segmentation-offload: off [requested on]
+generic-receive-offload: on
+rx-vlan-offload: on
+tx-vlan-offload: on
+tx-nocache-copy: off
+rx-fcs: off
+rx-all: off
+
+
+--> Interface 2: lo
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:100895867 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:100895867 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:42780248005 (42.7 GB)  TX bytes:42780248005 (42.7 GB)
+
+Interface info for lo:
+
+
+Interrupts for lo:
+            CPU0       CPU1       CPU2       CPU3       
+   0:         35          0          0          0   IO-APIC    2-edge      timer
+
+Pause parameters for lo:
+Coalesce parameters for lo:
+Ring parameters for lo:
+Features for lo:
+tx-checksumming: on
+scatter-gather: on
+tcp-segmentation-offload: on
+	tx-tcp-segmentation: on
+	tx-tcp-ecn-segmentation: on
+	tx-tcp6-segmentation: on
+udp-fragmentation-offload: on
+generic-segmentation-offload: on
+generic-receive-offload: on
+
+
