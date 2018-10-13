@@ -2,8 +2,8 @@
 
 Also included here is the script PRP Collect_Info v0.1 (collect_info.sh)
 
-Written by Josh Sonstroem on 21 June 2016 for the NSF PRP
-This version outputs in human readable format
+Written by Josh Sonstroem on 21 June 2016 for the PRP,
+this version outputs in human readable format.
 
 This script grabs system and network info related to 40 GE/100 GE
 tuning. It takes a list of NIC names as input. The script is intended
